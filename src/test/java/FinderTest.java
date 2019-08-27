@@ -24,18 +24,24 @@ public class FinderTest {
     public void testMin2()
     {
         Finder finder = new Finder();
-        int[] testArr = new int[]{1,1,1,1,1};
-        int expected = 1;
+        int[] testArr = null;
+        int expected = -1;
         int actual = finder.findMin(testArr);
         assertEquals(actual,expected);
+        testArr = new int[0];
+        actual = finder.findMin(testArr);
+        assertEquals(actual, expected);
     }
     @Test
     public void testMax2()
     {
         Finder finder = new Finder();
-        int[] testArr = new int[]{6,6,6,6,6};
-        int expected = 6;
+        int[] testArr = null;
+        int expected = -1;
         int actual = finder.findMax(testArr);
         assertEquals(actual,expected);
+        testArr = new int[0];
+        actual = finder.findMin(testArr);
+        assertEquals(actual, expected);
     }
 }
